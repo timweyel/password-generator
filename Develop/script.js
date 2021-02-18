@@ -109,6 +109,31 @@ if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial
     console.log(charTypesSelected);
   }
 
+  else if (includeNumeric && includeSpecial) {
+    charTypesSelected = (numericCodes.concat(specialCodes));
+    console.log(charTypesSelected);
+  }
+
+  else if (includeLowercase && includeSpecial) {
+    charTypesSelected = (lowercaseCodes.concat(specialCodes));
+    console.log(charTypesSelected);
+  } 
+
+  else if (includeUppercase && includeNumeric) {
+    charTypesSelected = (uppercaseCodes.concat(numericCodes));
+    console.log(charTypesSelected);
+  }
+
+  else if (includeLowercase && includeNumeric) {
+    charTypesSelected = (lowercaseCodes.concat(numericCodes));
+    console.log(charTypesSelected);
+  }
+
+  else if (includeUppercase && includeSpecial) {
+    charTypesSelected = (uppercaseCodes.concat(specialCodes));
+    console.log(charTypesSelected);
+  }
+
 
 // 1 types selected
 }
