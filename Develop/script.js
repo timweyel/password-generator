@@ -25,12 +25,22 @@ var includeLowercase; //stores whether or not to include lowercase chars
 var includeUppercase; //stores whether or not to include uppercase chars
 var includeNumeric; //stores whether or not to include numeric chars
 var includeSpecial; //stores whether or not to include special chars
+var charTypesSelected; //stores the character types the user selected 
+
+function charCodeArray(min, max) {
+  var array = [];
+  console.log(array);
+  for (var i = min; i <= max; i++) {
+    array.push(i);
+  }
+  return array;
+}
 
   // ASCII Character Code arrays
-var lowercaseCodes = charCodeArray(97, 122);
-var uppercaseCodes = charCodeArray(65, 90);
-var numericCodes = charCodeArray(48, 57);
-var specialCodes = charCodeArray(32, 47).concat(58, 64).concat(91, 96).concat(123, 126);
+  var lowercaseCodes = charCodeArray(97, 122);
+  var uppercaseCodes = charCodeArray(65, 90);
+  var numericCodes = charCodeArray(48, 57);
+  var specialCodes = charCodeArray(32, 47).concat(58, 64).concat(91, 96).concat(123, 126);
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -58,30 +68,65 @@ function generatePassword() {
   // confirm to include special characters
   includeSpecial = window.confirm("Select OK if you want to include special characters.");
   console.log(includeSpecial);
-    
-}  
 
-function charCodeArray(min, max) {
-  var array = [];
-  for (var i = min; i <= max; i++) {
-    array.push(i);
+
+
+// no answer selected
+if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+  charTypesSelected = alert('You must select at least one character type for the password');
+} 
+
+// 4 types selected
+  else if (includeLowercase && includeUppercase && includeNumeric && includeSpecial) {
+    charTypesSelected = (lowercaseCodes.concat(uppercaseCodes).concat(numericCodes).concat(specialCodes));
+    console.log(charTypesSelected);
   }
-  return array;
+
+// 3 types selected
+  else if (includeLowercase && includeUppercase && includeNumeric) {
+    charTypesSelected = (lowercaseCodes.concat(uppercaseCodes).concat(numericCodes));
+    console.log(charTypesSelected);
+  }
+
+  else if (includeLowercase && includeUppercase && includeSpecial) {
+    charTypesSelected = (lowercaseCodes.concat(uppercaseCodes).concat(specialCodes));
+    console.log(charTypesSelected);
+  }
+
+  else if (includeLowercase && includeNumeric && includeSpecial) {
+    charTypesSelected = (lowercaseCodes.concat(numericCodes).concat(specialCodes));
+    console.log(charTypesSelected);
+  }
+
+  else if (includeUppercase && includeNumeric && includeSpecial) {
+    charTypesSelected = (uppercaseCodes.concat(numericCodes).concat(specialCodes));
+    console.log(charTypesSelected);
+  }
+
+// 2 types selected
+  else if (includeLowercase && includeUppercase) {
+    charTypesSelected = (lowercaseCodes.concat(uppercaseCodes));
+    console.log(charTypesSelected);
+  }
+
+
+// 1 types selected
 }
+
+
+
+
 
 // Write password to the #password input
 function writePassword() {
-  
-  var password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumeric, includeSpecial){
-    String.fromCharCode()
-  };
-  var passwordText = document.querySelector("#password");
+var password = generatePassword();
+var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+passwordText.value = password;
 
 }
 
-
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
