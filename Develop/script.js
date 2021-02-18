@@ -21,16 +21,22 @@
 // global variables
 
 var passwordLength; //stores the length of password
-var includeLowercase; //
-var includeUppercase;
-var includeNumeric;
-var includeSpecial;
+var includeLowercase; //stores whether or not to include lowercase chars
+var includeUppercase; //stores whether or not to include uppercase chars
+var includeNumeric; //stores whether or not to include numeric chars
+var includeSpecial; //stores whether or not to include special chars
+
+  // ASCII Character Code arrays
+var lowercaseCodes = charCodeArray(97, 122);
+var uppercaseCodes = charCodeArray(65, 90);
+var numericCodes = charCodeArray(48, 57);
+var specialCodes = charCodeArray(32, 47).concat(58, 64).concat(91, 96).concat(123, 126);
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
+// Prompts to let user determine password requirements
+function generatePassword() {
 
   // prompt for password length
   passwordLength = window.prompt("How long would you like your password to be? Select a length from 8 to 128.");
@@ -53,10 +59,22 @@ function writePassword() {
   includeSpecial = window.confirm("Select OK if you want to include special characters.");
   console.log(includeSpecial);
     
-    
+}  
+
+function charCodeArray(min, max) {
+  var array = [];
+  for (var i = min; i <= max; i++) {
+    array.push(i);
+  }
+  return array;
+}
+
+// Write password to the #password input
+function writePassword() {
   
-  
-  var password = generatePassword();
+  var password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumeric, includeSpecial){
+    String.fromCharCode()
+  };
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
