@@ -134,8 +134,26 @@ if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial
     console.log(charTypesSelected);
   }
 
-
 // 1 types selected
+  else if (includeLowercase) {
+    charTypesSelected = (lowercaseCodes);
+    console.log(charTypesSelected);
+  }
+
+  else if (includeUppercase) {
+    charTypesSelected = (uppercaseCodes);
+    console.log(charTypesSelected);
+  }
+
+  else if (includeNumeric) {
+    charTypesSelected = (numericCodes);
+    console.log(charTypesSelected);
+  }
+
+  else if (includeSpecial) {
+    charTypesSelected = (specialCodes);
+    console.log(charTypesSelected);
+  }
 }
 
 
