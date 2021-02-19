@@ -21,7 +21,7 @@ We were tasked with creating an application that did the following:
 ..* At least one of each selected character type must be included in the password.
 ..* The generated password matches the selected criteria
 ..* The generated password should either be displayed in an alert or written to the page
-
+```
 
 #### Screenshots
 Following are screenshot of each step of the user flow:
