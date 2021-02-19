@@ -26,15 +26,10 @@ var includeUppercase; //stores whether or not to include uppercase chars
 var includeNumeric; //stores whether or not to include numeric chars
 var includeSpecial; //stores whether or not to include special chars
 var charTypesSelected; //stores the character types the user selected 
+var passwordArray; //stores an array of the selected password characters 
 
-function charCodeArray(min, max) {
-  var array = [];
-  console.log(array);
-  for (var i = min; i <= max; i++) {
-    array.push(i);
-  }
-  return array;
-}
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
   // ASCII Character Code arrays
   var lowercaseCodes = charCodeArray(97, 122);
@@ -42,8 +37,13 @@ function charCodeArray(min, max) {
   var numericCodes = charCodeArray(48, 57);
   var specialCodes = charCodeArray(32, 47).concat(58, 64).concat(91, 96).concat(123, 126);
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+function charCodeArray(min, max) {
+  var array = [];
+  for (var i = min; i <= max; i++) {
+    array.push(i);
+  }
+  return array;
+}
 
 // Prompts to let user determine password requirements
 function generatePassword() {
@@ -74,6 +74,7 @@ function generatePassword() {
 // no answer selected
 if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
   charTypesSelected = alert('You must select at least one character type for the password');
+  generatePassword();
 } 
 
 // 4 types selected
@@ -85,81 +86,94 @@ if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial
 // 3 types selected
   else if (includeLowercase && includeUppercase && includeNumeric) {
     charTypesSelected = (lowercaseCodes.concat(uppercaseCodes).concat(numericCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeLowercase && includeUppercase && includeSpecial) {
     charTypesSelected = (lowercaseCodes.concat(uppercaseCodes).concat(specialCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeLowercase && includeNumeric && includeSpecial) {
     charTypesSelected = (lowercaseCodes.concat(numericCodes).concat(specialCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeUppercase && includeNumeric && includeSpecial) {
     charTypesSelected = (uppercaseCodes.concat(numericCodes).concat(specialCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
 // 2 types selected
   else if (includeLowercase && includeUppercase) {
     charTypesSelected = (lowercaseCodes.concat(uppercaseCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeNumeric && includeSpecial) {
     charTypesSelected = (numericCodes.concat(specialCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeLowercase && includeSpecial) {
     charTypesSelected = (lowercaseCodes.concat(specialCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   } 
 
   else if (includeUppercase && includeNumeric) {
     charTypesSelected = (uppercaseCodes.concat(numericCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeLowercase && includeNumeric) {
     charTypesSelected = (lowercaseCodes.concat(numericCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeUppercase && includeSpecial) {
     charTypesSelected = (uppercaseCodes.concat(specialCodes));
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
 // 1 types selected
   else if (includeLowercase) {
     charTypesSelected = (lowercaseCodes);
-    console.log(charTypesSelected);
+   // console.log(charTypesSelected);
   }
 
   else if (includeUppercase) {
     charTypesSelected = (uppercaseCodes);
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeNumeric) {
     charTypesSelected = (numericCodes);
-    console.log(charTypesSelected);
+    //console.log(charTypesSelected);
   }
 
   else if (includeSpecial) {
     charTypesSelected = (specialCodes);
-    console.log(charTypesSelected);
-  }
+    //console.log(charTypesSelected);
+  }  ;
+
+var passwordArray = [];
+
+for (var i = 0; i < passwordLength; i++) {
+  
+  //console.log('characterSelections', characterSelections);
+  //console.log('charTypesSelected', charTypesSelected);
+  var characterSelections = charTypesSelected[Math.floor(Math.random() * passwordLength)];
+  //console.log(passwordArray);
+  passwordArray.push(String.fromCharCode(characterSelections));
+  //console.log(characterSelections);
 }
 
+// join array and return password
+var password = passwordArray.join("");
+console.log("Your Password is: " + password);
+return password;
 
-
-
-
+}
 // Write password to the #password input
 function writePassword() {
 var password = generatePassword();
