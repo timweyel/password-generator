@@ -23,7 +23,7 @@ We were tasked with creating an application that did the following:
 
 
 #### Screenshots
-Following are screenshot of each step of the user flow:
+Following are screenshots of each step of the user flow:
 
 ![pw-gen-1](https://user-images.githubusercontent.com/11637772/108550241-258a7a00-72a3-11eb-9df3-c5e5371dc96c.png)
 ![pw-gen-2](https://user-images.githubusercontent.com/11637772/108550247-27543d80-72a3-11eb-9466-381cf89393ba.png)
