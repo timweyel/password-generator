@@ -43,29 +43,23 @@ function generatePassword() {
 
   // prompt for password length
   passwordLength = window.prompt("How long would you like your password to be? Select a length from 8 to 128.");
-  //console.log(passwordLength);
 
-    //TODO: need to account for numbers outside of 8 to 128
   if (passwordLength < 8 || passwordLength > 128) {
     window.alert("Your password length must be more than 7 and less than 129 characters. Please enter a new length.")
     generatePassword();
   }
 
-    // confirm to include lowercase characters
+  // confirm to include lowercase characters
   includeLowercase = window.confirm("Select OK if you want to include lowercase characters.");
-  //console.log(includeLowercase);
   
   // confirm to include uppercase characters
   includeUppercase = window.confirm("Select OK if you want to include uppercase characters.");
-  //console.log(includeUppercase);
   
   // confirm to include numeric characters    
   includeNumeric = window.confirm("Select OK if you want to include numeric characters.");
-  //console.log(includeNumeric);
 
   // confirm to include special characters
   includeSpecial = window.confirm("Select OK if you want to include special characters.");
-  //console.log(includeSpecial);
 
   // no answer selected
   if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
