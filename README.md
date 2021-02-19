@@ -3,7 +3,6 @@
 For this project, we were provided html and css as currently shown in the screenshots below. We were also provided starter javascript code that didn't have any logic to prompt the user are any input that they might have provided. 
 
 ## Requirements
----
 
 ### User Story
 ```
