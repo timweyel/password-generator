@@ -37,7 +37,7 @@ Following are screenshots of each step of the user flow:
 
 [Repository](https://github.com/timweyel/password-generator)
 
-[Deployed Application](https://timweyel.github.io/password-generator/) *
+[Deployed Application](https://timweyel.github.io/password-generator/)*
 
 *Note: as of this writing, 1:30pm Pacific, Feb 19, the Deployed Application is not working. It works locally, but not as published by Github. Here's the full story:
 
