@@ -16,11 +16,11 @@ SO THAT I can create a strong password that provides greater security
 
 We were tasked with creating an application that did the following:
 * When the user clicks 'Generate Password', they are presented with a series of prompts that ask the following:
-..* How long should the password be? minimum of 8, maximum of 128 characters
-..* Would they like to include lowercase, uppercase, numeric, and/or special characters?
-..* At least one of each selected character type must be included in the password.
-..* The generated password matches the selected criteria
-..* The generated password should either be displayed in an alert or written to the page
+* How long should the password be? minimum of 8, maximum of 128 characters
+* Would they like to include lowercase, uppercase, numeric, and/or special characters?
+* At least one of each selected character type must be included in the password.
+* The generated password matches the selected criteria
+* The generated password should either be displayed in an alert or written to the page
 
 
 #### Screenshots
