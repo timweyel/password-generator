@@ -34,8 +34,6 @@ Following are screenshot of each step of the user flow:
 ![pw-gen-6](https://user-images.githubusercontent.com/11637772/108550257-2b805b00-72a3-11eb-8a76-de3246d6f675.png)
 ![pw-gen-7](https://user-images.githubusercontent.com/11637772/108550261-2cb18800-72a3-11eb-8938-c513c87d7964.png)
 
-The following image was provided to demonstrate the application functionality:
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
 
 
