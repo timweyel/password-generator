@@ -34,3 +34,7 @@ Following are screenshots of each step of the user flow:
 ![pw-gen-5](https://user-images.githubusercontent.com/11637772/108550255-2ae7c480-72a3-11eb-9362-e82e9a9883f0.png)
 ![pw-gen-6](https://user-images.githubusercontent.com/11637772/108550257-2b805b00-72a3-11eb-8a76-de3246d6f675.png)
 ![pw-gen-7](https://user-images.githubusercontent.com/11637772/108550261-2cb18800-72a3-11eb-8938-c513c87d7964.png)
+
+[Repository](https://github.com/timweyel/password-generator)
+
+[Deployed Application](https://timweyel.github.io/password-generator/)
