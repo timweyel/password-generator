@@ -34,3 +34,20 @@ Following are screenshots of each step of the user flow:
 ![pw-gen-5](https://user-images.githubusercontent.com/11637772/108550255-2ae7c480-72a3-11eb-9362-e82e9a9883f0.png)
 ![pw-gen-6](https://user-images.githubusercontent.com/11637772/108550257-2b805b00-72a3-11eb-8a76-de3246d6f675.png)
 ![pw-gen-7](https://user-images.githubusercontent.com/11637772/108550261-2cb18800-72a3-11eb-8938-c513c87d7964.png)
+
+[Repository](https://github.com/timweyel/password-generator)
+
+[Deployed Application](https://timweyel.github.io/password-generator/)*
+
+*Note: as of this writing, 1:30pm Pacific, Feb 19, the Deployed Application is not working. It works locally, but not as published by Github. Here's the full story:
+
+* Several days ago before I was finished with the project, I published the page like have done for past projects. I thought it was weird that it was linking to a README.md page about the project that I didn't right. I ignored it and moved on.
+* Today, as I was finishing the project and finalizing the README.md file, I was trying to figure out why it wasn't linking to the application. I noticed that the directory structure that the project had when it was given to us didn't have the assets and js folders.
+* I decided that this might be the issue and so I updated the directory structure as well as the references in the index.html file.
+The published page updated but it only seemed to have the index.html file and wasn't linking to the css or js files and there wasn't working at all.
+* Googled and googled without any luck. I asked in class. A classmate and I decided making a new repo might work as the .git file keeps the commit history.
+* I did that with the same results.
+* I reached out to AskBCS. They confirmed that I had things configured correctly and that it might be a delay.
+* I waited over an hour.
+* Decided to try to change the reference of the published page from main to develop branch. So I pushed my develop branch up to git and change the published page source to develop. To no avail. <sad face>
+* So, please don't ding me too much because the link doesn't work. If you pull the files, it should work locally. Let me know if you need more information. Thanks!

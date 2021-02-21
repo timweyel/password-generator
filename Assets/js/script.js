@@ -70,7 +70,6 @@ function generatePassword() {
   // 4 types selected
     else if (includeLowercase && includeUppercase && includeNumeric && includeSpecial) {
       charTypesSelected = (lowercaseCodes.concat(uppercaseCodes).concat(numericCodes).concat(specialCodes));
-      console.log(charTypesSelected);
     }
 
   // 3 types selected
