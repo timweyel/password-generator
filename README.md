@@ -1,5 +1,9 @@
 # 03 JavaScript: Password Generator
 
+[Repository](https://github.com/timweyel/password-generator)
+
+[Deployed Application](https://timweyel.github.io/password-generator/)
+
 For this project, we were provided html and css as currently shown in the screenshots below. We were also provided starter javascript code that didn't have any logic to prompt the user are any input that they might have provided.
 
 ## Requirements
@@ -35,6 +39,3 @@ Following are screenshots of each step of the user flow:
 ![pw-gen-6](https://user-images.githubusercontent.com/11637772/108550257-2b805b00-72a3-11eb-8a76-de3246d6f675.png)
 ![pw-gen-7](https://user-images.githubusercontent.com/11637772/108550261-2cb18800-72a3-11eb-8938-c513c87d7964.png)
 
-[Repository](https://github.com/timweyel/password-generator)
-
-[Deployed Application](https://timweyel.github.io/password-generator/)
