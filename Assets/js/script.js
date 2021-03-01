@@ -10,7 +10,6 @@
 // --password should be displayed as an alert or written to the page
 // --find edge/break cases
 
-//=======================================================================================
 
 // global variables
 var passwordLength; //stores the length of password
